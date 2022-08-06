@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        let canvas = document.querySelector('#myCanvas');
+        let context = canvas.getContext('2d');
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        let truck = {
+            x: 25,
+            y: 25
+        };
+
+        let wheels = {
+            x: 32,
+            y: 100
+        }
+
+        let wheels2 = {
+            x: 100,
+            y: 100
+        }
+
+        
+       
+        function drawRoad() {
+            context.beginPath();
+            context.moveTo(100, 100);
+            context.lineTo(canvas.width, 100);
+            context.lineWidth = 10;
+            context.stroke();
+        }
+
+        function drawRoad2() {
+            context.beginPath();
+            context.moveTo(150, 150);
+            context.lineTo(canvas.width, 150);
+            context.stroke();
+        }
+
+        function drawTruck() {
+            context.beginPath();
+            context.rect(truck.x, truck.y, 100, 50);
+            context.arc(wheels.x, wheels.y, 25, 0, Math.PI *2);
+            context.arc(wheels2.x, wheels2.y, 25, 0, Math.PI *2);
+            context.fillStyle = 'blue';
+            context.fill();
+        }
+
+        function pole() {
+            context.beginPath();
+            context.rect(15, 35, 20, 55);
+            context.fillStyle = 'grey';
+            context.fill();
+        }
+
+        function sign() {
+            context.beginPath();
+            context.rect(5, 5, 50, 30);
+            context.fillStyle = 'red';
+            context.fill();
+        }
+
+        function sun() {
+            context.beginPath();
+            context.arc(1300, 25, 20, 0, Math.PI * 2);
+            context.fillStyle = 'yellow';
+            context.fill();
+        }
+
+        function treeTrunk() {
+            context.beginPath();
+            context.rect(200, 200, 10, 100);
+            context.fillStyle = 'brown';
+            context.fill();
+        }
+
+        function tree() {
+            context.beginPath();
+            context.rect(173, 150, 70, 50);
+            context.fillStyle ='green';
+            context.fill();
+        }
+
+        
+        function treeTrunk2() {
+            context.beginPath();
+            context.rect(300, 300, 10, 100);
+            context.fillStyle = 'brown';
+            context.fill();
+        }
+
+        function tree2() {
+            context.beginPath();
+            context.rect(273, 250, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+        function treeTrunk3() {
+            context.beginPath();
+            context.rect(400, 400, 10, 100);
+            context.fillStyle = 'brown';
+            context.fill();
+        }
+
+        function tree3() {
+            context.beginPath();
+            context.rect(373, 350, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+        function treeTrunk4() {
+            context.beginPath();
+            context.rect(500, 500, 10, 100);
+            context.fillStyle = 'brown';
+            context.fill();
+        }
+
+        function tree4() {
+            context.beginPath();
+            context.rect(473, 450, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+        
+        function treeTrunk5() {
+            context.beginPath();
+            context.rect(100, 100, 10, 100);
+            context.fillStyle = 'brown';
+            context.fill();
+        }
+
+        function tree5() {
+            context.beginPath();
+            context.rect(55, 50, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+        function bush() {
+            context.beginPath();
+            context.rect(700, 700, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+        
+        function bush2() {
+            context.beginPath();
+            context.rect(700, 600, 70, 50);
+            context.fillStyle = 'green';
+            context.fill();
+        }
+
+
+        
+
+
+
+
+
+
+
+
+        function drawFrame() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawRoad();
+            drawRoad2();
+            drawTruck();
+
+            truck.x = truck.x + 1;
+            wheels.x = wheels.x + 1;
+            wheels2.x = wheels2.x + 1;
+
+            pole();
+
+            sign();
+
+            sun();
+
+            tree();
+
+            treeTrunk();
+
+            tree2();
+
+            treeTrunk2();
+
+            tree3();
+
+            treeTrunk3();
+
+            tree4();
+
+            treeTrunk4();
+
+            tree5();
+
+            treeTrunk5();
+
+            bush(); 
+
+            bush2();
+
+
+
+
+
+
+            
+
+            
+
+
+           
+
+
+            requestAnimationFrame(drawFrame);
+
+
+            
+
+
+
+
+
+            
+
+            
+
+
+
+
+        }
+
+        drawFrame();
+
+    </script>
+</body>
+</html>
